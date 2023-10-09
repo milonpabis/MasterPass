@@ -1,3 +1,5 @@
+import sqlite3
+
 from UI.Login import Ui_Form
 from UI.Passwords import Ui_MainWindow
 from UI.Item import Ui_Form as Ui_Item
@@ -39,6 +41,8 @@ class LoginPage(QWidget, Ui_Form):                                      # LOGIN 
         self.label.setStyleSheet("color: black;")
 
     def style_login(self):
+        self.label.setText("Master Safe")
+        self.label.setStyleSheet("color: black;")
         self.bt_cancel.hide()
         self.bt_login.show()
         self.le_mail.hide()
@@ -79,6 +83,7 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.current_user = None
         self.db = DataBaseControl()
         self.model = QStandardItemModel()
         self.listView_passwords.setModel(self.model)
@@ -97,13 +102,30 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
         if not self.login_page.register_mode:
             self.login_page.register_user_mode()
         else:
+            # validate and if so -> database and login automatically
+            email = self.login_page.le_mail.text()
+            username = self.login_page.le_username.text()
+            password = self.login_page.le_password.text()
+            if username and password:
+                try:
+                    self.db.add_user(email, username, password)
+                    self.current_user = username
+                    self.load_user_data()
+                    self.login_page.hide()
+                    self.show()
+                except sqlite3.IntegrityError:
+                    self.login_page.label.setText("User exists!")
+                    self.login_page.label.setStyleSheet("color: red;")
+
 
 
     def login_check(self):
         login_data = self.db.return_users()
-        typed_username = self.login_page.le_username.text()
-        typed_password = self.login_page.le_password.text()
-        if (typed_username, typed_password) in login_data:
+        username = self.login_page.le_username.text()
+        password = self.login_page.le_password.text()
+        if (username, password) in login_data:
+            self.current_user = username
+            self.load_user_data()
             self.login_page.hide()
             self.show()
         else:
@@ -112,31 +134,45 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
             self.login_page.label.setText('Incorrect!')
             self.login_page.label.setStyleSheet('color: red;')
 
+    def load_user_data(self):
+        data = self.db.return_data(self.current_user)
+        self.l_hello.setText(f"Hello, {self.current_user}")
+        for site, username, password in data:
+            self.add_item(site, username, password)
+        #print(data)
 
-    def add_item(self):
+    def add_item(self, *args):
         widget = Item()
         widget.bt_editsave.pressed.connect(lambda: self.save_edit(widget))
         widget.bt_itemdelete.pressed.connect(lambda: self.delete_item(widget))
         self.model.appendRow(widget.item)
         self.listView_passwords.setIndexWidget(widget.item.index(), widget)
+        if args:
+            widget.new = False
+            widget.group_sitename.setTitle(args[0])
+            widget.l_itemuser.setText(args[1])
+            widget.l_itempassword.setText(args[2])
+            widget.stackedWidget.setCurrentIndex(0)
 
     def save_edit(self, widget: Item):
         site = widget.le_editsite.text()
-        username = widget.le_edituser.text()
+        login = widget.le_edituser.text()
         password = widget.le_editpassword.text()
         old_site = widget.group_sitename.title()
-        old_username = widget.l_itemuser.text()
+        old_login = widget.l_itemuser.text()
         old_password = widget.l_itempassword.text()
         if widget.new:
+            print("new")
             widget.new = False
             # add to database
-            ...
+
+            self.db.add_password(self.current_user, site, login, password)
         else:
-
+            print("old")
             # update database
-            ...
+            self.db.update_password(self.current_user, site, login, password, old_site, old_login, old_password)
 
-        widget.l_itemuser.setText(username)
+        widget.l_itemuser.setText(login)
         widget.l_itempassword.setText(password)
         widget.group_sitename.setTitle(site)
         widget.change_site(0)
@@ -144,7 +180,10 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
 
     def delete_item(self, widget):
         self.model.removeRow(widget.item.row())
-        # delete from database
+        site = widget.group_sitename.title()
+        login = widget.l_itemuser.text()
+        password = widget.l_itempassword.text()
+        self.db.delete_password(self.current_user, site, login, password)
 
 
 

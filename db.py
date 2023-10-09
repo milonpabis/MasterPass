@@ -41,6 +41,18 @@ class DataBaseControl:
         self.cursor.execute(f"INSERT INTO Data VALUES ('{user}', '{site}', '{login}', '{password}')")
         self.connection.commit()
 
+    def delete_password(self, user, site, login, password):
+        self.cursor.execute(f"DELETE FROM Data WHERE Username = '{user}' AND Site = '{site}' AND Login = '{login}' "
+                            f"AND Password = '{password}'")
+        self.connection.commit()
+
+    def update_password(self, user, site, login, password, old_site, old_login, old_password):
+        print(user, site, login, password, old_site, old_login, old_password)
+        self.cursor.execute(f"UPDATE Data SET Site='{site}', Login='{login}', Password='{password}' WHERE "
+                            f"Username='{user}' AND Site='{old_site}' AND Login='{old_login}' AND"
+                            f" Password='{old_password}'")
+        self.connection.commit()
+
 
 # if __name__ == "__main__":
 #     db = DataBaseControl()
