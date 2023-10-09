@@ -8,7 +8,7 @@ from PySide6.QtCore import Qt
 USER = ('1', '1')
 
 
-class LoginPage(QWidget, Ui_Form):
+class LoginPage(QWidget, Ui_Form):                                      # LOGIN PAGE
 
     def __init__(self):
         super().__init__()
@@ -34,7 +34,36 @@ class LoginPage(QWidget, Ui_Form):
         self.l_mail.hide()
 
 
-class Passwords(QMainWindow, Ui_MainWindow):
+class Item(QWidget, Ui_Item):                                               # ITEM
+
+    def __init__(self):
+        super().__init__()
+        self.setupUi(self)
+        self.item = QStandardItem()
+        self.item.setSelectable(False)
+        self.new = True
+        self.bt_itemedit.pressed.connect(self.edit_start)
+        self.bt_editcancel.pressed.connect(self.edit_cancel)
+
+    def change_site(self, idx):
+        self.stackedWidget.setCurrentIndex(idx)
+
+    def edit_cancel(self):
+        if self.new:
+            self.bt_itemdelete.click()
+        else:
+            self.change_site(0)
+
+    def edit_start(self):
+        self.le_editsite.setText(self.group_sitename.title())
+        self.le_edituser.setText(self.l_itemuser.text())
+        self.le_editpassword.setText(self.l_itempassword.text())
+        self.change_site(1)
+
+
+
+
+class Passwords(QMainWindow, Ui_MainWindow):                                    # MAINPAGE
 
     def __init__(self):
         super().__init__()
@@ -66,17 +95,41 @@ class Passwords(QMainWindow, Ui_MainWindow):
 
     def add_item(self):
         widget = Item()
+        widget.bt_editsave.pressed.connect(lambda: self.save_edit(widget))
+        widget.bt_itemdelete.pressed.connect(lambda: self.delete_item(widget))
         self.model.appendRow(widget.item)
         self.listView_passwords.setIndexWidget(widget.item.index(), widget)
 
+    def save_edit(self, widget: Item):
+        site = widget.le_editsite.text()
+        username = widget.le_edituser.text()
+        password = widget.le_editpassword.text()
+        old_site = widget.group_sitename.title()
+        old_username = widget.l_itemuser.text()
+        old_password = widget.l_itempassword.text()
+        if widget.new:
+            widget.new = False
+            # add to database
+            ...
+        else:
+
+            # update database
+            ...
+
+        widget.l_itemuser.setText(username)
+        widget.l_itempassword.setText(password)
+        widget.group_sitename.setTitle(site)
+        widget.change_site(0)
 
 
-class Item(QWidget, Ui_Item):
+    def delete_item(self, widget):
+        self.model.removeRow(widget.item.row())
+        # delete from database
 
-    def __init__(self):
-        super().__init__()
-        self.setupUi(self)
-        self.item = QStandardItem()
-        self.item.setSelectable(False)
-        self.new = True
+
+
+
+
+
+
 
