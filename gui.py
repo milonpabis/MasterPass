@@ -4,6 +4,7 @@ from UI.Item import Ui_Form as Ui_Item
 from PySide6.QtWidgets import QMainWindow, QApplication, QWidget
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
+from db import DataBaseControl
 
 USER = ('1', '1')
 
@@ -12,14 +13,24 @@ class LoginPage(QWidget, Ui_Form):                                      # LOGIN 
 
     def __init__(self):
         super().__init__()
+        self.register_mode = False
         self.setupUi(self)
         self.l_mail.hide()
         self.le_mail.hide()
         self.bt_cancel.hide()
-        self.bt_signup.pressed.connect(self.style_sign)
-        self.bt_cancel.pressed.connect(self.style_cancel)
+        self.bt_signup.pressed.connect(self.register_user_mode)
+        self.bt_cancel.pressed.connect(self.login_user_mode)
 
-    def style_sign(self):
+
+    def register_user_mode(self):
+        self.register_mode = True
+        self.style_register()
+
+    def login_user_mode(self):
+        self.register_mode = False
+        self.style_login()
+
+    def style_register(self):
         self.l_mail.show()
         self.le_mail.show()
         self.bt_cancel.show()
@@ -27,7 +38,7 @@ class LoginPage(QWidget, Ui_Form):                                      # LOGIN 
         self.label.setText("Master Safe")
         self.label.setStyleSheet("color: black;")
 
-    def style_cancel(self):
+    def style_login(self):
         self.bt_cancel.hide()
         self.bt_login.show()
         self.le_mail.hide()
@@ -68,6 +79,7 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.db = DataBaseControl()
         self.model = QStandardItemModel()
         self.listView_passwords.setModel(self.model)
         self.listView_passwords.setFocusPolicy(Qt.FocusPolicy.NoFocus)
@@ -77,13 +89,21 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
 
         self.login_page = LoginPage()
         self.login_page.bt_login.pressed.connect(self.login_check)
+        self.login_page.bt_signup.pressed.connect(self.register_check)
         self.login_page.show()
 
 
+    def register_check(self):
+        if not self.login_page.register_mode:
+            self.login_page.register_user_mode()
+        else:
+
+
     def login_check(self):
+        login_data = self.db.return_users()
         typed_username = self.login_page.le_username.text()
         typed_password = self.login_page.le_password.text()
-        if typed_username == USER[0] and typed_password == USER[1]:
+        if (typed_username, typed_password) in login_data:
             self.login_page.hide()
             self.show()
         else:
