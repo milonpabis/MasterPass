@@ -102,7 +102,7 @@
       <property name="bottomMargin">
        <number>70</number>
       </property>
-      <item row="2" column="0">
+      <item row="1" column="0">
        <widget class="QLabel" name="l_mail">
         <property name="font">
          <font>
@@ -115,7 +115,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="2">
+      <item row="0" column="2">
        <widget class="QLineEdit" name="le_username">
         <property name="minimumSize">
          <size>
@@ -137,7 +137,7 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
+      <item row="0" column="0">
        <widget class="QLabel" name="l_username">
         <property name="minimumSize">
          <size>
@@ -162,7 +162,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="2" column="0">
        <widget class="QLabel" name="l_password">
         <property name="minimumSize">
          <size>
@@ -187,7 +187,7 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="2">
+      <item row="1" column="2">
        <widget class="QLineEdit" name="le_mail">
         <property name="minimumSize">
          <size>
@@ -203,7 +203,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="2">
+      <item row="2" column="2">
        <widget class="QLineEdit" name="le_password">
         <property name="minimumSize">
          <size>
@@ -222,22 +222,6 @@
           <width>0</width>
           <height>0</height>
          </size>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="l_message">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-          <bold>true</bold>
-         </font>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(255, 0, 0);</string>
-        </property>
-        <property name="text">
-         <string>Incorrect data!</string>
         </property>
        </widget>
       </item>

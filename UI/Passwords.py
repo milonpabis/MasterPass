@@ -23,13 +23,13 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(800, 500)
-        MainWindow.setMinimumSize(QSize(800, 500))
-        MainWindow.setMaximumSize(QSize(800, 800))
+        MainWindow.resize(800, 600)
+        MainWindow.setMinimumSize(QSize(800, 600))
+        MainWindow.setMaximumSize(QSize(800, 600))
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.centralwidget.setMinimumSize(QSize(800, 500))
-        self.centralwidget.setMaximumSize(QSize(800, 800))
+        self.centralwidget.setMinimumSize(QSize(800, 600))
+        self.centralwidget.setMaximumSize(QSize(800, 600))
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -84,6 +84,9 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.listView_passwords = QListView(self.groupBox)
         self.listView_passwords.setObjectName(u"listView_passwords")
+        self.listView_passwords.setSpacing(70)
+        self.listView_passwords.setUniformItemSizes(True)
+        self.listView_passwords.setBatchSize(10)
 
         self.verticalLayout_2.addWidget(self.listView_passwords)
 

@@ -65,7 +65,7 @@ class Ui_Form(object):
         font1.setBold(True)
         self.l_mail.setFont(font1)
 
-        self.gridLayout.addWidget(self.l_mail, 2, 0, 1, 1)
+        self.gridLayout.addWidget(self.l_mail, 1, 0, 1, 1)
 
         self.le_username = QLineEdit(self.frame_2)
         self.le_username.setObjectName(u"le_username")
@@ -73,7 +73,7 @@ class Ui_Form(object):
         self.le_username.setMaximumSize(QSize(200, 30))
         self.le_username.setSizeIncrement(QSize(0, 0))
 
-        self.gridLayout.addWidget(self.le_username, 1, 2, 1, 1)
+        self.gridLayout.addWidget(self.le_username, 0, 2, 1, 1)
 
         self.l_username = QLabel(self.frame_2)
         self.l_username.setObjectName(u"l_username")
@@ -81,7 +81,7 @@ class Ui_Form(object):
         self.l_username.setMaximumSize(QSize(100, 16777215))
         self.l_username.setFont(font1)
 
-        self.gridLayout.addWidget(self.l_username, 1, 0, 1, 1)
+        self.gridLayout.addWidget(self.l_username, 0, 0, 1, 1)
 
         self.l_password = QLabel(self.frame_2)
         self.l_password.setObjectName(u"l_password")
@@ -89,14 +89,14 @@ class Ui_Form(object):
         self.l_password.setMaximumSize(QSize(100, 16777215))
         self.l_password.setFont(font1)
 
-        self.gridLayout.addWidget(self.l_password, 3, 0, 1, 1)
+        self.gridLayout.addWidget(self.l_password, 2, 0, 1, 1)
 
         self.le_mail = QLineEdit(self.frame_2)
         self.le_mail.setObjectName(u"le_mail")
         self.le_mail.setMinimumSize(QSize(200, 30))
         self.le_mail.setMaximumSize(QSize(200, 30))
 
-        self.gridLayout.addWidget(self.le_mail, 2, 2, 1, 1)
+        self.gridLayout.addWidget(self.le_mail, 1, 2, 1, 1)
 
         self.le_password = QLineEdit(self.frame_2)
         self.le_password.setObjectName(u"le_password")
@@ -104,17 +104,7 @@ class Ui_Form(object):
         self.le_password.setMaximumSize(QSize(200, 30))
         self.le_password.setSizeIncrement(QSize(0, 0))
 
-        self.gridLayout.addWidget(self.le_password, 3, 2, 1, 1)
-
-        self.l_message = QLabel(self.frame_2)
-        self.l_message.setObjectName(u"l_message")
-        font2 = QFont()
-        font2.setPointSize(10)
-        font2.setBold(True)
-        self.l_message.setFont(font2)
-        self.l_message.setStyleSheet(u"color: rgb(255, 0, 0);")
-
-        self.gridLayout.addWidget(self.l_message, 0, 2, 1, 1)
+        self.gridLayout.addWidget(self.le_password, 2, 2, 1, 1)
 
 
         self.verticalLayout.addWidget(self.frame_2)
@@ -162,7 +152,6 @@ class Ui_Form(object):
         self.l_mail.setText(QCoreApplication.translate("Form", u"E-mail", None))
         self.l_username.setText(QCoreApplication.translate("Form", u"Username", None))
         self.l_password.setText(QCoreApplication.translate("Form", u"Password", None))
-        self.l_message.setText(QCoreApplication.translate("Form", u"Incorrect data!", None))
         self.bt_cancel.setText(QCoreApplication.translate("Form", u"Cancel", None))
         self.bt_login.setText(QCoreApplication.translate("Form", u"Log In", None))
         self.bt_signup.setText(QCoreApplication.translate("Form", u"Sign Up", None))
