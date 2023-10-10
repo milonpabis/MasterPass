@@ -114,10 +114,20 @@ class Ui_Form(object):
         font2.setBold(True)
         font2.setItalic(False)
         self.bt_itemedit.setFont(font2)
-        self.bt_itemedit.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+        self.bt_itemedit.setStyleSheet(u"QPushButton {background-color: rgb(255, 255, 255);\n"
+"border-radius: 3px;\n"
+"border: 1px solid rgb(80, 106, 89);\n"
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:hover {background-color: rgb(255, 255, 255);\n"
 "border-radius: 5px;\n"
 "border: 1px solid rgb(80, 106, 89);\n"
-"color: rgb(80, 106, 89);")
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:pressed {background-color: rgb(255, 255, 255);\n"
+"border-radius: 5px;\n"
+"border: 1px solid rgb(80, 106, 89);\n"
+"color: rgb(80, 106, 89);}")
 
         self.horizontalLayout_6.addWidget(self.bt_itemedit)
 
@@ -125,10 +135,20 @@ class Ui_Form(object):
         self.bt_itemdelete.setObjectName(u"bt_itemdelete")
         self.bt_itemdelete.setMaximumSize(QSize(50, 16777215))
         self.bt_itemdelete.setFont(font2)
-        self.bt_itemdelete.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+        self.bt_itemdelete.setStyleSheet(u"QPushButton {background-color: rgb(255, 255, 255);\n"
+"border-radius: 3px;\n"
+"border: 1px solid rgb(80, 106, 89);\n"
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:hover {background-color: rgb(255, 255, 255);\n"
 "border-radius: 5px;\n"
 "border: 1px solid rgb(80, 106, 89);\n"
-"color: rgb(80, 106, 89);")
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:pressed {background-color: rgb(255, 255, 255);\n"
+"border-radius: 5px;\n"
+"border: 1px solid rgb(80, 106, 89);\n"
+"color: rgb(80, 106, 89);}")
 
         self.horizontalLayout_6.addWidget(self.bt_itemdelete)
 
@@ -163,8 +183,8 @@ class Ui_Form(object):
         font3.setBold(True)
         self.label.setFont(font3)
         self.label.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid black;\n"
-"background-color: rgb(255, 255, 255);\n"
+"border: 1px solid black;\n"
+"background-color: rgb(221, 255, 236);\n"
 "color: rgb(80, 106, 89);")
 
         self.horizontalLayout_2.addWidget(self.label)
@@ -172,9 +192,13 @@ class Ui_Form(object):
         self.le_editsite = QLineEdit(self.frame)
         self.le_editsite.setObjectName(u"le_editsite")
         self.le_editsite.setMaximumSize(QSize(400, 35))
+        font4 = QFont()
+        font4.setPointSize(10)
+        font4.setBold(True)
+        self.le_editsite.setFont(font4)
         self.le_editsite.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid black;\n"
-"background-color: rgb(255, 255, 255);\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 236);\n"
 "color: rgb(80, 106, 89);")
         self.le_editsite.setAlignment(Qt.AlignCenter)
 
@@ -197,8 +221,8 @@ class Ui_Form(object):
         self.label_2.setMinimumSize(QSize(100, 0))
         self.label_2.setFont(font3)
         self.label_2.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid black;\n"
-"background-color: rgb(255, 255, 255);\n"
+"border: 1px solid black;\n"
+"background-color: rgb(221, 255, 236);\n"
 "color: rgb(80, 106, 89);")
 
         self.horizontalLayout_3.addWidget(self.label_2)
@@ -206,9 +230,10 @@ class Ui_Form(object):
         self.le_edituser = QLineEdit(self.frame_2)
         self.le_edituser.setObjectName(u"le_edituser")
         self.le_edituser.setMaximumSize(QSize(400, 35))
+        self.le_edituser.setFont(font4)
         self.le_edituser.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid black;\n"
-"background-color: rgb(255, 255, 255);\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 236);\n"
 "color: rgb(80, 106, 89);")
         self.le_edituser.setAlignment(Qt.AlignCenter)
 
@@ -231,8 +256,8 @@ class Ui_Form(object):
         self.label_3.setMinimumSize(QSize(100, 0))
         self.label_3.setFont(font3)
         self.label_3.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid black;\n"
-"background-color: rgb(255, 255, 255);\n"
+"border: 1px solid black;\n"
+"background-color: rgb(221, 255, 236);\n"
 "color: rgb(80, 106, 89);")
 
         self.horizontalLayout_4.addWidget(self.label_3)
@@ -240,9 +265,10 @@ class Ui_Form(object):
         self.le_editpassword = QLineEdit(self.frame_3)
         self.le_editpassword.setObjectName(u"le_editpassword")
         self.le_editpassword.setMaximumSize(QSize(400, 35))
+        self.le_editpassword.setFont(font4)
         self.le_editpassword.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid black;\n"
-"background-color: rgb(255, 255, 255);\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 236);\n"
 "color: rgb(80, 106, 89);")
         self.le_editpassword.setAlignment(Qt.AlignCenter)
 
@@ -265,10 +291,20 @@ class Ui_Form(object):
         self.bt_editsave.setObjectName(u"bt_editsave")
         self.bt_editsave.setMaximumSize(QSize(100, 16777215))
         self.bt_editsave.setFont(font3)
-        self.bt_editsave.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid black;\n"
-"background-color: rgb(255, 255, 255);\n"
-"color: rgb(80, 106, 89);")
+        self.bt_editsave.setStyleSheet(u"QPushButton {border-radius: 7px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 235);\n"
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:hover {border-radius: 10px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 235);\n"
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:pressed {border-radius: 10px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 238);\n"
+"color: rgb(80, 106, 89);}")
 
         self.horizontalLayout_5.addWidget(self.bt_editsave)
 
@@ -276,10 +312,20 @@ class Ui_Form(object):
         self.bt_editcancel.setObjectName(u"bt_editcancel")
         self.bt_editcancel.setMaximumSize(QSize(100, 16777215))
         self.bt_editcancel.setFont(font3)
-        self.bt_editcancel.setStyleSheet(u"border-radius: 10px;\n"
-"border: 2px solid black;\n"
-"background-color: rgb(255, 255, 255);\n"
-"color: rgb(80, 106, 89);")
+        self.bt_editcancel.setStyleSheet(u"QPushButton {border-radius: 7px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 235);\n"
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:hover {border-radius: 10px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 235);\n"
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:pressed {border-radius: 10px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(220, 255, 238);\n"
+"color: rgb(80, 106, 89);}")
 
         self.horizontalLayout_5.addWidget(self.bt_editcancel)
 

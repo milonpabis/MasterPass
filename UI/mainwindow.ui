@@ -25,6 +25,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="minimumSize">
     <size>
@@ -37,6 +40,9 @@
      <width>800</width>
      <height>600</height>
     </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <property name="spacing">
@@ -69,7 +75,8 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(192, 255, 213);</string>
+       <string notr="true">background-color: rgb(192, 255, 213);
+</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -117,10 +124,20 @@
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">border-radius: 20px;
+          <string notr="true">QPushButton {border-radius: 15px;
 background-color: rgb(192, 255, 213);
 border: 1px solid rgb(80, 106, 89);
-color: rgb(80, 106, 89);</string>
+color: rgb(80, 106, 89);}
+
+QPushButton:hover {border-radius: 20px;
+background-color: rgb(192, 255, 213);
+border: 1px solid rgb(80, 106, 89);
+color: rgb(80, 106, 89);}
+
+QPushButton:pressed {border-radius: 20px;
+background-color: rgb(192, 245, 213);
+border: 1px solid rgb(80, 106, 89);
+color: rgb(80, 106, 89);}</string>
          </property>
          <property name="text">
           <string>+</string>
@@ -139,7 +156,7 @@ color: rgb(80, 106, 89);</string>
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgb(174, 231, 193);</string>
+       <string notr="true">background-color: rgb(80, 106, 89);</string>
       </property>
       <property name="frameShape">
        <enum>QFrame::NoFrame</enum>
@@ -157,7 +174,7 @@ color: rgb(80, 106, 89);</string>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">color: rgb(80, 106, 89);</string>
+          <string notr="true">color: rgb(192, 255, 213);</string>
          </property>
          <property name="title">
           <string>Your Passwords</string>
@@ -169,7 +186,7 @@ color: rgb(80, 106, 89);</string>
           <item>
            <widget class="QListView" name="listView_passwords">
             <property name="styleSheet">
-             <string notr="true">background-color: rgb(192, 255, 213);</string>
+             <string notr="true">background-color: rgb(255, 255, 255);</string>
             </property>
             <property name="spacing">
              <number>70</number>

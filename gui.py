@@ -3,7 +3,7 @@ import sqlite3
 from UI.Login import Ui_Form
 from UI.Passwords import Ui_MainWindow
 from UI.Item import Ui_Form as Ui_Item
-from PySide6.QtWidgets import QMainWindow, QApplication, QWidget
+from PySide6.QtWidgets import QMainWindow, QApplication, QWidget, QLineEdit
 from PySide6.QtGui import QStandardItemModel, QStandardItem
 from PySide6.QtCore import Qt
 from db import DataBaseControl
@@ -17,21 +17,27 @@ class LoginPage(QWidget, Ui_Form):                                      # LOGIN 
         super().__init__()
         self.register_mode = False
         self.setupUi(self)
+        self.setWindowTitle("MasterSafe")
         self.l_mail.hide()
         self.le_mail.hide()
         self.bt_cancel.hide()
         self.bt_signup.pressed.connect(self.register_user_mode)
         self.bt_cancel.pressed.connect(self.login_user_mode)
+        self.le_password.setEchoMode(QLineEdit.EchoMode.Password)
+
 
 
     def register_user_mode(self):
         self.register_mode = True
         self.style_register()
+        self.le_password.setEchoMode(QLineEdit.EchoMode.Normal)
 
     def login_user_mode(self):
         self.register_mode = False
         self.le_mail.setText('')
         self.style_login()
+        self.le_password.setEchoMode(QLineEdit.EchoMode.Password)
+
 
     def style_register(self):
         self.l_mail.show()
@@ -40,6 +46,8 @@ class LoginPage(QWidget, Ui_Form):                                      # LOGIN 
         self.bt_login.hide()
         self.label.setText("Master Safe")
         self.label.setStyleSheet("color: rgb(80, 106, 89);")
+        self.le_password.setText("")
+        self.le_username.setText("")
 
     def style_login(self):
         self.label.setText("Master Safe")
@@ -48,6 +56,8 @@ class LoginPage(QWidget, Ui_Form):                                      # LOGIN 
         self.bt_login.show()
         self.le_mail.hide()
         self.l_mail.hide()
+        self.le_username.setText("")
+        self.le_password.setText("")
 
 
 
@@ -85,6 +95,7 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.setWindowTitle("MasterSafe")
         self.current_user = None
         self.db = DataBaseControl()
         self.model = QStandardItemModel()
@@ -155,6 +166,8 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
             widget.l_itemuser.setText(args[1])
             widget.l_itempassword.setText(args[2])
             widget.stackedWidget.setCurrentIndex(0)
+        else:
+            self.listView_passwords.scrollToBottom()
 
     def save_edit(self, widget: Item):
         site = widget.le_editsite.text()

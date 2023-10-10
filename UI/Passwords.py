@@ -26,10 +26,12 @@ class Ui_MainWindow(object):
         MainWindow.resize(800, 600)
         MainWindow.setMinimumSize(QSize(800, 600))
         MainWindow.setMaximumSize(QSize(800, 600))
+        MainWindow.setStyleSheet(u"")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setMinimumSize(QSize(800, 600))
         self.centralwidget.setMaximumSize(QSize(800, 600))
+        self.centralwidget.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -38,7 +40,8 @@ class Ui_MainWindow(object):
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(0, 80))
         self.frame.setMaximumSize(QSize(800, 80))
-        self.frame.setStyleSheet(u"background-color: rgb(192, 255, 213);")
+        self.frame.setStyleSheet(u"background-color: rgb(192, 255, 213);\n"
+"")
         self.frame.setFrameShape(QFrame.NoFrame)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame)
@@ -63,10 +66,20 @@ class Ui_MainWindow(object):
         font1.setPointSize(24)
         font1.setBold(True)
         self.bt_add.setFont(font1)
-        self.bt_add.setStyleSheet(u"border-radius: 20px;\n"
+        self.bt_add.setStyleSheet(u"QPushButton {border-radius: 15px;\n"
 "background-color: rgb(192, 255, 213);\n"
 "border: 1px solid rgb(80, 106, 89);\n"
-"color: rgb(80, 106, 89);")
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:hover {border-radius: 20px;\n"
+"background-color: rgb(192, 255, 213);\n"
+"border: 1px solid rgb(80, 106, 89);\n"
+"color: rgb(80, 106, 89);}\n"
+"\n"
+"QPushButton:pressed {border-radius: 20px;\n"
+"background-color: rgb(192, 245, 213);\n"
+"border: 1px solid rgb(80, 106, 89);\n"
+"color: rgb(80, 106, 89);}")
 
         self.horizontalLayout.addWidget(self.bt_add)
 
@@ -76,7 +89,7 @@ class Ui_MainWindow(object):
         self.frame_2 = QFrame(self.centralwidget)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setMaximumSize(QSize(800, 16777215))
-        self.frame_2.setStyleSheet(u"background-color: rgb(174, 231, 193);")
+        self.frame_2.setStyleSheet(u"background-color: rgb(80, 106, 89);")
         self.frame_2.setFrameShape(QFrame.NoFrame)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_2)
@@ -87,13 +100,13 @@ class Ui_MainWindow(object):
         font2.setPointSize(10)
         font2.setBold(True)
         self.groupBox.setFont(font2)
-        self.groupBox.setStyleSheet(u"color: rgb(80, 106, 89);")
+        self.groupBox.setStyleSheet(u"color: rgb(192, 255, 213);")
         self.groupBox.setAlignment(Qt.AlignCenter)
         self.verticalLayout_2 = QVBoxLayout(self.groupBox)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.listView_passwords = QListView(self.groupBox)
         self.listView_passwords.setObjectName(u"listView_passwords")
-        self.listView_passwords.setStyleSheet(u"background-color: rgb(192, 255, 213);")
+        self.listView_passwords.setStyleSheet(u"background-color: rgb(255, 255, 255);")
         self.listView_passwords.setSpacing(70)
         self.listView_passwords.setUniformItemSizes(True)
         self.listView_passwords.setBatchSize(100)

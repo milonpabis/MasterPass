@@ -87,7 +87,8 @@ class Ui_Form(object):
         self.le_username.setFont(font2)
         self.le_username.setStyleSheet(u"border-radius: 10px;\n"
 "border: 1px solid black;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
 
         self.gridLayout.addWidget(self.le_username, 0, 2, 1, 1)
 
@@ -122,7 +123,8 @@ class Ui_Form(object):
         self.le_mail.setFont(font2)
         self.le_mail.setStyleSheet(u"border-radius: 10px;\n"
 "border: 1px solid black;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
 
         self.gridLayout.addWidget(self.le_mail, 1, 2, 1, 1)
 
@@ -134,7 +136,8 @@ class Ui_Form(object):
         self.le_password.setFont(font2)
         self.le_password.setStyleSheet(u"border-radius: 10px;\n"
 "border: 1px solid black;\n"
-"background-color: rgb(255, 255, 255);")
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
 
         self.gridLayout.addWidget(self.le_password, 2, 2, 1, 1)
 
@@ -160,10 +163,20 @@ class Ui_Form(object):
         font3.setPointSize(10)
         font3.setBold(True)
         self.bt_cancel.setFont(font3)
-        self.bt_cancel.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+        self.bt_cancel.setStyleSheet(u"QPushButton {color: rgb(80, 106, 89);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
-"border: 1px solid black;")
+"border: 1px solid black; }\n"
+"\n"
+"QPushButton:hover {color: rgb(80, 106, 89);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius: 15px;\n"
+"border: 1px solid black; }\n"
+"\n"
+"QPushButton:pressed {color: rgb(80, 106, 89);\n"
+"background-color: rgb(192, 255, 213);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black; }")
 
         self.horizontalLayout_2.addWidget(self.bt_cancel)
 
@@ -171,10 +184,20 @@ class Ui_Form(object):
         self.bt_login.setObjectName(u"bt_login")
         self.bt_login.setMaximumSize(QSize(100, 35))
         self.bt_login.setFont(font3)
-        self.bt_login.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+        self.bt_login.setStyleSheet(u"QPushButton {color: rgb(80, 106, 89);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
-"border: 1px solid black;")
+"border: 1px solid black; }\n"
+"\n"
+"QPushButton:hover {color: rgb(80, 106, 89);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius: 15px;\n"
+"border: 1px solid black; }\n"
+"\n"
+"QPushButton:pressed {color: rgb(80, 106, 89);\n"
+"background-color: rgb(192, 255, 213);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black; }")
 
         self.horizontalLayout_2.addWidget(self.bt_login)
 
@@ -182,10 +205,20 @@ class Ui_Form(object):
         self.bt_signup.setObjectName(u"bt_signup")
         self.bt_signup.setMaximumSize(QSize(100, 35))
         self.bt_signup.setFont(font3)
-        self.bt_signup.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+        self.bt_signup.setStyleSheet(u"QPushButton {color: rgb(80, 106, 89);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius: 10px;\n"
-"border: 1px solid black;")
+"border: 1px solid black; }\n"
+"\n"
+"QPushButton:hover {color: rgb(80, 106, 89);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius: 15px;\n"
+"border: 1px solid black; }\n"
+"\n"
+"QPushButton:pressed {color: rgb(80, 106, 89);\n"
+"background-color: rgb(192, 255, 213);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black; }")
 
         self.horizontalLayout_2.addWidget(self.bt_signup)
 

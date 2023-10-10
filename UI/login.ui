@@ -161,7 +161,8 @@ border: 1px solid black;</string>
         <property name="styleSheet">
          <string notr="true">border-radius: 10px;
 border: 1px solid black;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+color: rgb(80, 106, 89);</string>
         </property>
        </widget>
       </item>
@@ -250,7 +251,8 @@ border: 1px solid black;</string>
         <property name="styleSheet">
          <string notr="true">border-radius: 10px;
 border: 1px solid black;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+color: rgb(80, 106, 89);</string>
         </property>
        </widget>
       </item>
@@ -283,7 +285,8 @@ background-color: rgb(255, 255, 255);</string>
         <property name="styleSheet">
          <string notr="true">border-radius: 10px;
 border: 1px solid black;
-background-color: rgb(255, 255, 255);</string>
+background-color: rgb(255, 255, 255);
+color: rgb(80, 106, 89);</string>
         </property>
        </widget>
       </item>
@@ -342,10 +345,20 @@ background-color: rgb(255, 255, 255);</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(80, 106, 89);
+         <string notr="true">QPushButton {color: rgb(80, 106, 89);
 background-color: rgb(255, 255, 255);
 border-radius: 10px;
-border: 1px solid black;</string>
+border: 1px solid black; }
+
+QPushButton:hover {color: rgb(80, 106, 89);
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+border: 1px solid black; }
+
+QPushButton:pressed {color: rgb(80, 106, 89);
+background-color: rgb(192, 255, 213);
+border-radius: 10px;
+border: 1px solid black; }</string>
         </property>
         <property name="text">
          <string>Cancel</string>
@@ -368,10 +381,20 @@ border: 1px solid black;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(80, 106, 89);
+         <string notr="true">QPushButton {color: rgb(80, 106, 89);
 background-color: rgb(255, 255, 255);
 border-radius: 10px;
-border: 1px solid black;</string>
+border: 1px solid black; }
+
+QPushButton:hover {color: rgb(80, 106, 89);
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+border: 1px solid black; }
+
+QPushButton:pressed {color: rgb(80, 106, 89);
+background-color: rgb(192, 255, 213);
+border-radius: 10px;
+border: 1px solid black; }</string>
         </property>
         <property name="text">
          <string>Log In</string>
@@ -394,10 +417,20 @@ border: 1px solid black;</string>
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">color: rgb(80, 106, 89);
+         <string notr="true">QPushButton {color: rgb(80, 106, 89);
 background-color: rgb(255, 255, 255);
 border-radius: 10px;
-border: 1px solid black;</string>
+border: 1px solid black; }
+
+QPushButton:hover {color: rgb(80, 106, 89);
+background-color: rgb(255, 255, 255);
+border-radius: 15px;
+border: 1px solid black; }
+
+QPushButton:pressed {color: rgb(80, 106, 89);
+background-color: rgb(192, 255, 213);
+border-radius: 10px;
+border: 1px solid black; }</string>
         </property>
         <property name="text">
          <string>Sign Up</string>
