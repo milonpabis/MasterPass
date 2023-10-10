@@ -33,6 +33,7 @@ class Ui_Form(object):
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
         self.stackedWidget = QStackedWidget(Form)
         self.stackedWidget.setObjectName(u"stackedWidget")
+        self.stackedWidget.setStyleSheet(u"background-color: rgb(80, 106, 89);")
         self.page_5 = QWidget()
         self.page_5.setObjectName(u"page_5")
         self.verticalLayout_2 = QVBoxLayout(self.page_5)
@@ -46,6 +47,8 @@ class Ui_Form(object):
         font.setBold(True)
         font.setItalic(True)
         self.group_sitename.setFont(font)
+        self.group_sitename.setStyleSheet(u"background-color: rgb(80, 106, 89);\n"
+"color: rgb(192, 255, 213);")
         self.group_sitename.setAlignment(Qt.AlignCenter)
         self.verticalLayout_3 = QVBoxLayout(self.group_sitename)
         self.verticalLayout_3.setSpacing(0)
@@ -53,6 +56,8 @@ class Ui_Form(object):
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
         self.frame_4 = QFrame(self.group_sitename)
         self.frame_4.setObjectName(u"frame_4")
+        self.frame_4.setStyleSheet(u"border-radius:10px;\n"
+"background-color: rgb(192, 255, 213);")
         self.frame_4.setFrameShape(QFrame.NoFrame)
         self.frame_4.setFrameShadow(QFrame.Raised)
         self.verticalLayout_4 = QVBoxLayout(self.frame_4)
@@ -64,6 +69,7 @@ class Ui_Form(object):
         font1.setBold(True)
         font1.setItalic(False)
         self.l_itemuser.setFont(font1)
+        self.l_itemuser.setStyleSheet(u"color: rgb(80, 106, 89);")
         self.l_itemuser.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_4.addWidget(self.l_itemuser)
@@ -73,6 +79,8 @@ class Ui_Form(object):
 
         self.frame_5 = QFrame(self.group_sitename)
         self.frame_5.setObjectName(u"frame_5")
+        self.frame_5.setStyleSheet(u"border-radius:10px;\n"
+"background-color: rgb(174, 231, 193);")
         self.frame_5.setFrameShape(QFrame.NoFrame)
         self.frame_5.setFrameShadow(QFrame.Raised)
         self.verticalLayout_5 = QVBoxLayout(self.frame_5)
@@ -80,6 +88,7 @@ class Ui_Form(object):
         self.l_itempassword = QLabel(self.frame_5)
         self.l_itempassword.setObjectName(u"l_itempassword")
         self.l_itempassword.setFont(font1)
+        self.l_itempassword.setStyleSheet(u"color: rgb(80, 106, 89);")
         self.l_itempassword.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_5.addWidget(self.l_itempassword)
@@ -89,6 +98,8 @@ class Ui_Form(object):
 
         self.frame_6 = QFrame(self.group_sitename)
         self.frame_6.setObjectName(u"frame_6")
+        self.frame_6.setStyleSheet(u"border-radius:10px;\n"
+"background-color: rgb(153, 203, 170);")
         self.frame_6.setFrameShape(QFrame.NoFrame)
         self.frame_6.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_6 = QHBoxLayout(self.frame_6)
@@ -103,6 +114,10 @@ class Ui_Form(object):
         font2.setBold(True)
         font2.setItalic(False)
         self.bt_itemedit.setFont(font2)
+        self.bt_itemedit.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"border-radius: 5px;\n"
+"border: 1px solid rgb(80, 106, 89);\n"
+"color: rgb(80, 106, 89);")
 
         self.horizontalLayout_6.addWidget(self.bt_itemedit)
 
@@ -110,6 +125,10 @@ class Ui_Form(object):
         self.bt_itemdelete.setObjectName(u"bt_itemdelete")
         self.bt_itemdelete.setMaximumSize(QSize(50, 16777215))
         self.bt_itemdelete.setFont(font2)
+        self.bt_itemdelete.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"border-radius: 5px;\n"
+"border: 1px solid rgb(80, 106, 89);\n"
+"color: rgb(80, 106, 89);")
 
         self.horizontalLayout_6.addWidget(self.bt_itemdelete)
 
@@ -128,6 +147,8 @@ class Ui_Form(object):
         self.verticalLayout.setContentsMargins(3, 3, 3, 3)
         self.frame = QFrame(self.page_6)
         self.frame.setObjectName(u"frame")
+        self.frame.setStyleSheet(u"border-radius:10px;\n"
+"background-color: rgb(192, 255, 213);")
         self.frame.setFrameShape(QFrame.NoFrame)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame)
@@ -137,15 +158,24 @@ class Ui_Form(object):
         self.label.setObjectName(u"label")
         self.label.setMinimumSize(QSize(100, 0))
         font3 = QFont()
+        font3.setFamilies([u"Candara"])
         font3.setPointSize(12)
         font3.setBold(True)
         self.label.setFont(font3)
+        self.label.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
 
         self.horizontalLayout_2.addWidget(self.label)
 
         self.le_editsite = QLineEdit(self.frame)
         self.le_editsite.setObjectName(u"le_editsite")
         self.le_editsite.setMaximumSize(QSize(400, 35))
+        self.le_editsite.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
         self.le_editsite.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_2.addWidget(self.le_editsite)
@@ -155,6 +185,8 @@ class Ui_Form(object):
 
         self.frame_2 = QFrame(self.page_6)
         self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setStyleSheet(u"border-radius:10px;\n"
+"background-color: rgb(174, 231, 193);")
         self.frame_2.setFrameShape(QFrame.NoFrame)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame_2)
@@ -164,12 +196,20 @@ class Ui_Form(object):
         self.label_2.setObjectName(u"label_2")
         self.label_2.setMinimumSize(QSize(100, 0))
         self.label_2.setFont(font3)
+        self.label_2.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
 
         self.horizontalLayout_3.addWidget(self.label_2)
 
         self.le_edituser = QLineEdit(self.frame_2)
         self.le_edituser.setObjectName(u"le_edituser")
         self.le_edituser.setMaximumSize(QSize(400, 35))
+        self.le_edituser.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
         self.le_edituser.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_3.addWidget(self.le_edituser)
@@ -179,6 +219,8 @@ class Ui_Form(object):
 
         self.frame_3 = QFrame(self.page_6)
         self.frame_3.setObjectName(u"frame_3")
+        self.frame_3.setStyleSheet(u"border-radius:10px;\n"
+"background-color: rgb(153, 203, 170);")
         self.frame_3.setFrameShape(QFrame.NoFrame)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_4 = QHBoxLayout(self.frame_3)
@@ -188,12 +230,20 @@ class Ui_Form(object):
         self.label_3.setObjectName(u"label_3")
         self.label_3.setMinimumSize(QSize(100, 0))
         self.label_3.setFont(font3)
+        self.label_3.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
 
         self.horizontalLayout_4.addWidget(self.label_3)
 
         self.le_editpassword = QLineEdit(self.frame_3)
         self.le_editpassword.setObjectName(u"le_editpassword")
         self.le_editpassword.setMaximumSize(QSize(400, 35))
+        self.le_editpassword.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
         self.le_editpassword.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_4.addWidget(self.le_editpassword)
@@ -203,21 +253,33 @@ class Ui_Form(object):
 
         self.frame_7 = QFrame(self.page_6)
         self.frame_7.setObjectName(u"frame_7")
+        self.frame_7.setStyleSheet(u"border-radius:10px;\n"
+"background-color: rgb(132, 175, 146);")
         self.frame_7.setFrameShape(QFrame.NoFrame)
         self.frame_7.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_5 = QHBoxLayout(self.frame_7)
-        self.horizontalLayout_5.setSpacing(5)
+        self.horizontalLayout_5.setSpacing(3)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(400, 0, 0, 0)
         self.bt_editsave = QPushButton(self.frame_7)
         self.bt_editsave.setObjectName(u"bt_editsave")
         self.bt_editsave.setMaximumSize(QSize(100, 16777215))
+        self.bt_editsave.setFont(font3)
+        self.bt_editsave.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
 
         self.horizontalLayout_5.addWidget(self.bt_editsave)
 
         self.bt_editcancel = QPushButton(self.frame_7)
         self.bt_editcancel.setObjectName(u"bt_editcancel")
         self.bt_editcancel.setMaximumSize(QSize(100, 16777215))
+        self.bt_editcancel.setFont(font3)
+        self.bt_editcancel.setStyleSheet(u"border-radius: 10px;\n"
+"border: 2px solid black;\n"
+"background-color: rgb(255, 255, 255);\n"
+"color: rgb(80, 106, 89);")
 
         self.horizontalLayout_5.addWidget(self.bt_editcancel)
 

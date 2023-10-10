@@ -34,6 +34,7 @@ class Ui_Form(object):
         self.frame.setObjectName(u"frame")
         self.frame.setMinimumSize(QSize(0, 80))
         self.frame.setMaximumSize(QSize(16777215, 80))
+        self.frame.setStyleSheet(u"background-color: rgb(192, 255, 213);")
         self.frame.setFrameShape(QFrame.NoFrame)
         self.frame.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame)
@@ -41,9 +42,12 @@ class Ui_Form(object):
         self.label = QLabel(self.frame)
         self.label.setObjectName(u"label")
         font = QFont()
-        font.setPointSize(26)
+        font.setFamilies([u"Segoe Print"])
+        font.setPointSize(28)
         font.setBold(True)
+        font.setItalic(False)
         self.label.setFont(font)
+        self.label.setStyleSheet(u"color: rgb(80, 106, 89);")
         self.label.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout.addWidget(self.label)
@@ -53,6 +57,7 @@ class Ui_Form(object):
 
         self.frame_2 = QFrame(Form)
         self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setStyleSheet(u"background-color: rgb(174, 231, 193);")
         self.frame_2.setFrameShape(QFrame.NoFrame)
         self.frame_2.setFrameShadow(QFrame.Raised)
         self.gridLayout = QGridLayout(self.frame_2)
@@ -61,9 +66,13 @@ class Ui_Form(object):
         self.l_mail = QLabel(self.frame_2)
         self.l_mail.setObjectName(u"l_mail")
         font1 = QFont()
-        font1.setPointSize(14)
+        font1.setPointSize(12)
         font1.setBold(True)
         self.l_mail.setFont(font1)
+        self.l_mail.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+"background-color: rgb(174, 231, 193);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black;")
 
         self.gridLayout.addWidget(self.l_mail, 1, 0, 1, 1)
 
@@ -72,6 +81,13 @@ class Ui_Form(object):
         self.le_username.setMinimumSize(QSize(200, 30))
         self.le_username.setMaximumSize(QSize(200, 30))
         self.le_username.setSizeIncrement(QSize(0, 0))
+        font2 = QFont()
+        font2.setPointSize(10)
+        font2.setBold(True)
+        self.le_username.setFont(font2)
+        self.le_username.setStyleSheet(u"border-radius: 10px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(255, 255, 255);")
 
         self.gridLayout.addWidget(self.le_username, 0, 2, 1, 1)
 
@@ -80,6 +96,10 @@ class Ui_Form(object):
         self.l_username.setMinimumSize(QSize(100, 0))
         self.l_username.setMaximumSize(QSize(100, 16777215))
         self.l_username.setFont(font1)
+        self.l_username.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+"background-color: rgb(192, 255, 213);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black;")
 
         self.gridLayout.addWidget(self.l_username, 0, 0, 1, 1)
 
@@ -88,6 +108,10 @@ class Ui_Form(object):
         self.l_password.setMinimumSize(QSize(100, 0))
         self.l_password.setMaximumSize(QSize(100, 16777215))
         self.l_password.setFont(font1)
+        self.l_password.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+"background-color: rgb(153, 203, 170);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black;")
 
         self.gridLayout.addWidget(self.l_password, 2, 0, 1, 1)
 
@@ -95,6 +119,10 @@ class Ui_Form(object):
         self.le_mail.setObjectName(u"le_mail")
         self.le_mail.setMinimumSize(QSize(200, 30))
         self.le_mail.setMaximumSize(QSize(200, 30))
+        self.le_mail.setFont(font2)
+        self.le_mail.setStyleSheet(u"border-radius: 10px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(255, 255, 255);")
 
         self.gridLayout.addWidget(self.le_mail, 1, 2, 1, 1)
 
@@ -103,6 +131,10 @@ class Ui_Form(object):
         self.le_password.setMinimumSize(QSize(200, 30))
         self.le_password.setMaximumSize(QSize(200, 30))
         self.le_password.setSizeIncrement(QSize(0, 0))
+        self.le_password.setFont(font2)
+        self.le_password.setStyleSheet(u"border-radius: 10px;\n"
+"border: 1px solid black;\n"
+"background-color: rgb(255, 255, 255);")
 
         self.gridLayout.addWidget(self.le_password, 2, 2, 1, 1)
 
@@ -113,6 +145,7 @@ class Ui_Form(object):
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setMinimumSize(QSize(0, 100))
         self.frame_3.setMaximumSize(QSize(16777215, 100))
+        self.frame_3.setStyleSheet(u"background-color: rgb(153, 203, 170);")
         self.frame_3.setFrameShape(QFrame.NoFrame)
         self.frame_3.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_2 = QHBoxLayout(self.frame_3)
@@ -122,18 +155,37 @@ class Ui_Form(object):
         self.bt_cancel = QPushButton(self.frame_3)
         self.bt_cancel.setObjectName(u"bt_cancel")
         self.bt_cancel.setMaximumSize(QSize(100, 35))
+        font3 = QFont()
+        font3.setFamilies([u"Verdana"])
+        font3.setPointSize(10)
+        font3.setBold(True)
+        self.bt_cancel.setFont(font3)
+        self.bt_cancel.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black;")
 
         self.horizontalLayout_2.addWidget(self.bt_cancel)
 
         self.bt_login = QPushButton(self.frame_3)
         self.bt_login.setObjectName(u"bt_login")
         self.bt_login.setMaximumSize(QSize(100, 35))
+        self.bt_login.setFont(font3)
+        self.bt_login.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black;")
 
         self.horizontalLayout_2.addWidget(self.bt_login)
 
         self.bt_signup = QPushButton(self.frame_3)
         self.bt_signup.setObjectName(u"bt_signup")
         self.bt_signup.setMaximumSize(QSize(100, 35))
+        self.bt_signup.setFont(font3)
+        self.bt_signup.setStyleSheet(u"color: rgb(80, 106, 89);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius: 10px;\n"
+"border: 1px solid black;")
 
         self.horizontalLayout_2.addWidget(self.bt_signup)
 

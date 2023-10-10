@@ -30,6 +30,7 @@ class LoginPage(QWidget, Ui_Form):                                      # LOGIN 
 
     def login_user_mode(self):
         self.register_mode = False
+        self.le_mail.setText('')
         self.style_login()
 
     def style_register(self):
@@ -38,15 +39,16 @@ class LoginPage(QWidget, Ui_Form):                                      # LOGIN 
         self.bt_cancel.show()
         self.bt_login.hide()
         self.label.setText("Master Safe")
-        self.label.setStyleSheet("color: black;")
+        self.label.setStyleSheet("color: rgb(80, 106, 89);")
 
     def style_login(self):
         self.label.setText("Master Safe")
-        self.label.setStyleSheet("color: black;")
+        self.label.setStyleSheet("color: rgb(80, 106, 89);")
         self.bt_cancel.hide()
         self.bt_login.show()
         self.le_mail.hide()
         self.l_mail.hide()
+
 
 
 class Item(QWidget, Ui_Item):                                               # ITEM
@@ -106,7 +108,7 @@ class Passwords(QMainWindow, Ui_MainWindow):                                    
             email = self.login_page.le_mail.text()
             username = self.login_page.le_username.text()
             password = self.login_page.le_password.text()
-            if username and password:
+            if username and password and email:
                 try:
                     self.db.add_user(email, username, password)
                     self.current_user = username

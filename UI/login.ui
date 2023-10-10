@@ -55,6 +55,9 @@
        <height>80</height>
       </size>
      </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(192, 255, 213);</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -66,9 +69,14 @@
        <widget class="QLabel" name="label">
         <property name="font">
          <font>
-          <pointsize>26</pointsize>
+          <family>Segoe Print</family>
+          <pointsize>28</pointsize>
+          <italic>false</italic>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(80, 106, 89);</string>
         </property>
         <property name="text">
          <string>Master Safe</string>
@@ -83,6 +91,9 @@
    </item>
    <item>
     <widget class="QFrame" name="frame_2">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(174, 231, 193);</string>
+     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>
@@ -106,9 +117,15 @@
        <widget class="QLabel" name="l_mail">
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>12</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(80, 106, 89);
+background-color: rgb(174, 231, 193);
+border-radius: 10px;
+border: 1px solid black;</string>
         </property>
         <property name="text">
          <string>E-mail</string>
@@ -135,6 +152,17 @@
           <height>0</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 10px;
+border: 1px solid black;
+background-color: rgb(255, 255, 255);</string>
+        </property>
        </widget>
       </item>
       <item row="0" column="0">
@@ -153,9 +181,15 @@
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>12</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(80, 106, 89);
+background-color: rgb(192, 255, 213);
+border-radius: 10px;
+border: 1px solid black;</string>
         </property>
         <property name="text">
          <string>Username</string>
@@ -178,9 +212,15 @@
         </property>
         <property name="font">
          <font>
-          <pointsize>14</pointsize>
+          <pointsize>12</pointsize>
           <bold>true</bold>
          </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(80, 106, 89);
+background-color: rgb(153, 203, 170);
+border-radius: 10px;
+border: 1px solid black;</string>
         </property>
         <property name="text">
          <string>Password</string>
@@ -200,6 +240,17 @@
           <width>200</width>
           <height>30</height>
          </size>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 10px;
+border: 1px solid black;
+background-color: rgb(255, 255, 255);</string>
         </property>
        </widget>
       </item>
@@ -223,6 +274,17 @@
           <height>0</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-radius: 10px;
+border: 1px solid black;
+background-color: rgb(255, 255, 255);</string>
+        </property>
        </widget>
       </item>
      </layout>
@@ -241,6 +303,9 @@
        <width>16777215</width>
        <height>100</height>
       </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(153, 203, 170);</string>
      </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
@@ -269,6 +334,19 @@
           <height>35</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(80, 106, 89);
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+border: 1px solid black;</string>
+        </property>
         <property name="text">
          <string>Cancel</string>
         </property>
@@ -282,6 +360,19 @@
           <height>35</height>
          </size>
         </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(80, 106, 89);
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+border: 1px solid black;</string>
+        </property>
         <property name="text">
          <string>Log In</string>
         </property>
@@ -294,6 +385,19 @@
           <width>100</width>
           <height>35</height>
          </size>
+        </property>
+        <property name="font">
+         <font>
+          <family>Verdana</family>
+          <pointsize>10</pointsize>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(80, 106, 89);
+background-color: rgb(255, 255, 255);
+border-radius: 10px;
+border: 1px solid black;</string>
         </property>
         <property name="text">
          <string>Sign Up</string>
